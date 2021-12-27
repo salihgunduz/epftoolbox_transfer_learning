@@ -14,14 +14,14 @@ import os
 # has to be provided, where the file has to be a csv file
 
 # target market we want to predict.
-target = 'BE'
+target = 'FR'
 # source market we pre-trained the model.
-source = 'DE'
+source = 'BE'
 # DNN model's index 1 to 4 (Models in the Lago et. al.)
-DNN_id = '4'
+DNN_id = '3'
 # Unique identifier to read the saved models.
 experiment_id = 1
-hyperparameter_file_name = 'DNN_hyperparameters_nl2_datBE_YT2_SF_SF_DA_CW4_1'
+hyperparameter_file_name = 'DNN_hyperparameters_nl2_datFR_YT2_SF_SF_CW4_1'
 
 
 ######  #  #    # ######  ###
