@@ -13,21 +13,22 @@ import os
 # Market under study. If it not one of the  standard ones, the file name
 # has to be provided, where the file has to be a csv file
 
-#target market we want to predict.
-target = 'FR'
-#source market we pre-trained the model.
-source =  'BE'
+# target market we want to predict.
+target = 'BE'
+# source market we pre-trained the model.
+source = 'DE'
 # DNN model's index 1 to 4 (Models in the Lago et. al.)
-DNN_id='1'
-hyperparameter_file_name =  'DNN_hyperparameters_nl2_datFR_YT2_SF_CW4_1'
-
+DNN_id = '4'
+# Unique identifier to read the saved models.
+experiment_id = 1
+hyperparameter_file_name = 'DNN_hyperparameters_nl2_datBE_YT2_SF_SF_DA_CW4_1'
 
 
 ######  #  #    # ######  ###
 #       #   #  #  #       #  #
-####    #    ##   ######  #   # 
+####    #    ##   ######  #   #
 #       #   #  #  #       #  #
-#       #  #    # ######  ### 
+#       #  #    # ######  ###
 
 # Number of years (a year is 364 days) in the test dataset.
 years_test = 2
@@ -50,7 +51,7 @@ calibration_window = 1
 
 # Unique identifier to read the trials file of hyperparameter optimization
 experiment_id = 1
-# Optional parameters for selecting the test dataset, if either of them is not provided, 
+# Optional parameters for selecting the test dataset, if either of them is not provided,
 # the test dataset is built using the years_test parameter. They should either be one of
 # the date formats existing in python or a string with the following format
 # "%d/%m/%Y %H:%M"
@@ -64,11 +65,11 @@ path_hyperparameter_folder = os.path.join('.', 'experimental_files')
 
 
 evaluate_finetune_in_test_dataset(experiment_id, path_hyperparameter_folder=path_hyperparameter_folder,
-                               path_datasets_folder=path_datasets_folder, shuffle_train=shuffle_train, 
-                               path_recalibration_folder=path_recalibration_folder, 
-                               hyperparameter_file_name=hyperparameter_file_name,
-                               DNN_id=DNN_id,target=target,source=source,
-                               nlayers=nlayers, dataset=target, years_test=years_test, 
-                               data_augmentation=data_augmentation, calibration_window=calibration_window, 
-                               new_recalibration=new_recalibration, begin_test_date=begin_test_date, 
-                               end_test_date=end_test_date)
+                                  path_datasets_folder=path_datasets_folder, shuffle_train=shuffle_train,
+                                  path_recalibration_folder=path_recalibration_folder,
+                                  hyperparameter_file_name=hyperparameter_file_name,
+                                  DNN_id=DNN_id, target=target, source=source,
+                                  nlayers=nlayers, dataset=target, years_test=years_test,
+                                  data_augmentation=data_augmentation, calibration_window=calibration_window,
+                                  new_recalibration=new_recalibration, begin_test_date=begin_test_date,
+                                  end_test_date=end_test_date)

@@ -26,6 +26,7 @@ from epftoolbox.data import scaling
 from epftoolbox.data import read_data
 from tensorflow.keras.models import load_model
 from keras.backend import manual_variable_initialization
+import joblib
 
 
 model_index = 1
@@ -111,13 +112,12 @@ class DNNModel(object):
         manual_variable_initialization(True)
         self.model = self._build_model()
 
-
         global model_index
         model_name = 'saved_models/{}_{}_{}_FT/{}_{}_{}_FT_1_{}.h5'.format(target,source,DNN_id,target,source,DNN_id,model_index)
         self.model = load_model(model_name)
         self.model.trainable = False
         model_index =  model_index + 1 
-        print()
+
 
 
         if lr is None:
@@ -477,7 +477,7 @@ class DNN(object):
         list
             List containing the five arrays but scaled
         """
-        np.random.seed(int(self.best_hyperparameters['seed']))
+
         # If required, datasets are scaled
         if self.best_hyperparameters['scaleX'] in ['Norm', 'Norm1', 'Std', 'Median', 'Invariant']:
             [Xtrain, Xval, Xtest], _ = scaling(
@@ -489,8 +489,11 @@ class DNN(object):
                 [Ytrain, Yval], self.best_hyperparameters['scaleY'])
         else:
             self.scaler = None
-        print(self.best_hyperparameters['scaleX'])
-        print(Xtest[0][0])  
+# =============================================================================
+#         print(self.best_hyperparameters['scaleX'])
+#         print(Xtest[0][0])  
+# =============================================================================
+
         return Xtrain, Xval, Xtest, Ytrain, Yval
 
     def recalibrate(self, Xtrain, Ytrain, Xval, Yval):
@@ -526,7 +529,7 @@ class DNN(object):
                               batch_normalization=self.best_hyperparameters['batch_normalization'],
                               lr=self.best_hyperparameters['lr'], verbose=False,
                               optimizer='adam', activation=self.best_hyperparameters['activation'],
-                              epochs_early_stopping=1, scaler=self.scaler, loss='mae',
+                              epochs_early_stopping=1,scaler = self.scaler,  loss='mae',
                               regularization=self.best_hyperparameters['reg'],
                               lambda_reg=self.best_hyperparameters['lambdal1'],
                               initializer=self.best_hyperparameters['init'],
@@ -630,8 +633,11 @@ class DNN(object):
             _build_and_split_XYs(dfTrain=df_train, features=self.best_hyperparameters,
                                  shuffle_train=True, dfTest=df_test, date_test=next_day_date,
                                  data_augmentation=self.data_augmentation,
-                                 n_exogenous_inputs=len(df_train.columns) - 1)
-        print(Xtest[0][0])  
+                                 n_exogenous_inputs=len(df_train.columns) - 1,
+                                 target=self.target, source=self.source,DNN_id=self.DNN_id, experiment_id=self.experiment_id)
+# =============================================================================
+#         print(Xtest[0][0])  
+# =============================================================================
         # Normalizing the input and outputs if needed
         Xtrain, Xval, Xtest, Ytrain, Yval = \
             self._regularize_data(Xtrain=Xtrain, Xval=Xval,
@@ -867,7 +873,8 @@ def format_best_trial(best_trial):
 
 
 def _build_and_split_XYs(dfTrain, features, shuffle_train, n_exogenous_inputs, dfTest=None, percentage_val=0.25,
-                         date_test=None, hyperoptimization=False, data_augmentation=False):
+                         date_test=None, hyperoptimization=False, data_augmentation=False,
+                         target='FR',source='BE', DNN_id=3, experiment_id=1):
     """Method to buil the X,Y pairs for training/test DNN models using dataframes and a list of
     the selected inputs
 
@@ -1051,9 +1058,16 @@ def _build_and_split_XYs(dfTrain, features, shuffle_train, n_exogenous_inputs, d
         index = np.arange(Xtrain.shape[0])
         index_week = index[::7]
         np.random.shuffle(index_week)
+ 
+        # We aresaving index_week for re-producing same results on test.
+        shuflle_filename = 'saved_models/{}_{}_{}_FT/{}_{}_{}_FT_1_1_SF_{}'.format(target,source,DNN_id,target,source,DNN_id,model_index)
+        #shuflle_filename ='FR_BE_3_FT_1_1_SF_{}'.format(model_index)
+        joblib.dump(index_week, shuflle_filename) 
+        index_week = joblib.load(shuflle_filename) 
+        #print(index_week)
         index_shuffle = [
             ind + i for ind in index_week for i in range(7) if ind + i in index]
-
+        
         Xtrain = Xtrain[index_shuffle]
         Ytrain = Ytrain[index_shuffle]
 
