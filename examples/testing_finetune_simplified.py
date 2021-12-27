@@ -18,10 +18,10 @@ target = 'FR'
 # source market we pre-trained the model.
 source = 'BE'
 # DNN model's index 1 to 4 (Models in the Lago et. al.)
-DNN_id = '3'
+DNN_id = '1'
 # Unique identifier to read the saved models.
 experiment_id = 1
-hyperparameter_file_name = 'DNN_hyperparameters_nl2_datFR_YT2_SF_SF_CW4_1'
+hyperparameter_file_name = 'DNN_hyperparameters_nl2_datFR_YT2_SF_CW4_1'
 
 
 ######  #  #    # ######  ###
