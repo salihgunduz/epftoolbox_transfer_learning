@@ -1061,8 +1061,7 @@ def _build_and_split_XYs(dfTrain, features, shuffle_train, n_exogenous_inputs, d
  
         # We aresaving index_week for re-producing same results on test.
         shuflle_filename = 'saved_models/{}_{}_{}_FT/{}_{}_{}_FT_1_1_SF_{}'.format(target,source,DNN_id,target,source,DNN_id,model_index)
-        #shuflle_filename ='FR_BE_3_FT_1_1_SF_{}'.format(model_index)
-        joblib.dump(index_week, shuflle_filename) 
+        #joblib.dump(index_week, shuflle_filename) 
         index_week = joblib.load(shuflle_filename) 
         #print(index_week)
         index_shuffle = [
