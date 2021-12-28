@@ -11,9 +11,13 @@ Anyone can test and produce predictions by running  “transfer_learning_test.py
 
 "target_source_DNNid_FT_experimentid_testday.h5"  
 
-where FT means fine-tuned. The pre-treained models will be given as PT. hyperparameter_file_name can be copied from the folder "experimental_files". For example for Belgium DNN 4 is "
+where FT means fine-tuned. The pre-treained models will be given as PT. hyperparameter_file_name can be copied from the folder "experimental_files". For example for Belgium DNN 4 is "DNN_hyperparameters_nl2_datBE_YT2_SF_SF_DA_CW4_1"
 
-For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT/BE_FR_4_FT_1_1.h5" model is used. There are also random shuffle indexes files for each test day in the same folder  for producing same results. 
+For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT/BE_FR_4_FT_1_1.h5" model is used. There are also random shuffle indexes files for each test day in the same folder  for producing same results. New Forecasts are in frecasts folder. They are are named like :
+
+"target_source_DNNid_FT_experimentid_testday.h5"  
+
+
 
 
 
