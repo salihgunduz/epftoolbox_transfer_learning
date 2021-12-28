@@ -15,14 +15,7 @@ where FT means fine-tuned. The pre-treained models will be given as PT. hyperpar
 
 For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT/BE_FR_4_FT_1_1.h5" model is used. There are also random shuffle indexes files for each test day in the same folder  for producing same results. New Forecasts are in frecasts folder. They are are named like :
 
-"target_source_DNNid_FT_experimentid_testday.h5"  
-
-
-
-
-
-
-
+"target_source_DNNid_FT_MAE.xlsx"  
 
 Just for now, testing with saved models is available. 
 Pre-training and fine-tuning classes are orginising in a genereric way. We will share them in the short term.  
