@@ -1,6 +1,43 @@
 # epftoolbox transfer learning
 
-The epftoobox library is modifiedfor transfer learning applications.
+The epftoobox library is modified for transfer learning applications.
+
+\begin{algorithm}
+\caption{Pre-training and Fine-tuning}\label{alg:two}
+\KwData{Selected Source and Target Market}
+\KwResult{Forecasts for Test Period}\;
+
+{do hyperparameter search for the target market}
+
+\For{Days in Test Period}{
+
+  Read best hyperparameters for the target market
+  
+  Construct the model which is defined in the hyperparameter file 
+  
+  Initialize model with selected initialization method
+  
+  Re-calibrate with source market data and forecast the next day
+  
+  Save pre-trained model for the current day
+
+}
+
+\For{Days in Test Period}{
+
+  Read best hyperparameters for the target market
+  
+  Construct the model which is defined in the hyperparameter file 
+  
+  Load pre-trained model for the current day
+  
+  Re-calibrate with target market data and forecast the next day
+  
+  Save fine-tuned  model for the current day
+
+}
+\end{algorithm}
+
 
 The library has been developed as part of the following article:
 
