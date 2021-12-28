@@ -7,7 +7,7 @@ First, we select the best DNN models for the Belgium(DNN 4) and France(DNN 3) ta
 We also selected the French market for detailed analysis on all DNN models suggested in Lago et al. (2021). We applied transfer learning to all four models of the French market.Fine-tuning has shown a statistically significant performance increase for all models with the exception of DNN 4. 
 
 # Namings and testing
-Anyone can test and produce predictions by running “transfer_learning_test.py” file.
+Anyone can test and produce predictions by running  “transfer_learning_test.py” file.  In this file, we can set source, target, DNN_id and hyperparameter_file_name parameters. Saved models are in 
 
 
 
