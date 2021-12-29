@@ -9,13 +9,13 @@ We also selected the French market for detailed analysis on all DNN models sugge
 # Namings and testing
 Anyone can test and produce predictions by running  “transfer_learning_test.py” file.  In this file, we can set source, target, DNN_id and hyperparameter_file_name parameters. Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
 
-"target_source_DNNid_FT_experimentid_testday.h5"  
+"target_source_dnnId_FT_experimentId_testDay.h5"  
 
 where FT means fine-tuned. The pre-treained models will be given as PT. hyperparameter_file_name can be copied from the folder "experimental_files". For example for Belgium DNN 4 is "DNN_hyperparameters_nl2_datBE_YT2_SF_SF_DA_CW4_1"
 
 For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT/BE_FR_4_FT_1_1.h5" model is used. There are also random shuffle indexes files for each test day in the same folder  for producing same results. New Forecasts are in "forecasts" folder. They are are named like :
 
-"target_source_DNNid_FT_MAE.xlsx"  
+"target_source_dnnId_FT_MAE.xlsx"  
 
 Just for now, testing with saved models is available. 
 Pre-training and fine-tuning classes are orginising in a genereric way. We will share them in the short term.  
