@@ -8,20 +8,48 @@ Simplified example for using the DNN model for forecasting prices with daily rec
 
 from epftoolbox.models import evaluate_finetune_in_test_dataset
 import os
+import argparse
 
+
+# ------------------------------ EXTERNAL PARAMETERS ------------------------------------#
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument("--target", type=str, default='FR', 
+                    help='target market we want to predict')
+
+parser.add_argument("--source", type=str, default='BE', 
+                    help='source market we pre-trained the model.')
+
+parser.add_argument("--DNN_id", type=str, default='1', 
+                    help='DNN model"s index 1 to 4 (Models in the Lago et. al. (2021))')
+
+parser.add_argument("--experiment_id", type=str, default='1', 
+                    help='Unique identifier to read the saved models')
+
+parser.add_argument("--hyperparameter_file_name", type=str, default='DNN_hyperparameters_nl2_datFR_YT2_SF_CW4_1', 
+                    help='Unique identifier to read the saved models')
+
+
+args = parser.parse_args()
+
+dataset = args.dataset
+years_test = args.years_test
+calibration_window = args.calibration_window
+begin_test_date = args.begin_test_date
 
 # Market under study. If it not one of the  standard ones, the file name
 # has to be provided, where the file has to be a csv file
 
 # target market we want to predict.
-target = 'FR'
+target = args.target
 # source market we pre-trained the model.
-source = 'BE'
-# DNN model's index 1 to 4 (Models in the Lago et. al.)
-DNN_id = '1'
+source = args.source
+# DNN model's index 1 to 4 (Models in the Lago et. al. (2021))
+DNN_id = args.DNN_id
 # Unique identifier to read the saved models.
-experiment_id = 1
-hyperparameter_file_name = 'DNN_hyperparameters_nl2_datFR_YT2_SF_CW4_1'
+experiment_id = args.experiment_id
+hyperparameter_file_name = args.hyperparameter_file_name
 
 
 ######  #  #    # ######  ###
