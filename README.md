@@ -1,6 +1,5 @@
 # epftoolbox transfer learning
 
-This toolbox is the modified version of the epftoobox for transfer learning applications.
 
 The epftoolbox is the first open-access library for driving research in electricity price forecasting. Its main goal is to make available a set of tools that ensure reproducibility and establish research standards in electricity price forecasting research.
 
@@ -12,7 +11,7 @@ The library is distributed under the AGPL-3.0 License and it is built on top of 
 
 Website: [https://epftoolbox.readthedocs.io/en/latest/](https://epftoolbox.readthedocs.io/en/latest/) 
 
-
+## This is the modified version of the epftoobox for transfer learning applications.
 
 First, we select the best DNN models for the Belgium(DNN 4) and France(DNN 3) target markets. 
 We applied transfer learning from Belgium to France and France to Belgium. 
