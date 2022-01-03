@@ -33,10 +33,6 @@ parser.add_argument("--hyperparameter_file_name", type=str, default='DNN_hyperpa
 
 args = parser.parse_args()
 
-dataset = args.dataset
-years_test = args.years_test
-calibration_window = args.calibration_window
-begin_test_date = args.begin_test_date
 
 # Market under study. If it not one of the  standard ones, the file name
 # has to be provided, where the file has to be a csv file
