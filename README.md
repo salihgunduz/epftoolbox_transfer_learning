@@ -10,6 +10,7 @@ The library has been developed as part of the following article:
 The library is distributed under the AGPL-3.0 License and it is built on top of scikit-learn, tensorflow, keras, hyperopt, statsmodels, numpy, and pandas. 
 
 Website: [https://epftoolbox.readthedocs.io/en/latest/](https://epftoolbox.readthedocs.io/en/latest/) 
+
 Just for now, testing with saved models is available. 
 Pre-training and fine-tuning classes are orginizing in a genereric way. We will share them in the short term.  
 
@@ -36,6 +37,8 @@ Install using pip
 $ pip install .
 ```
 Navigate to the examples folder and produce predictions by running  “transfer_learning_test.py” file.
+
+Colab test: [https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE15wKSfcwgXVN_Ri?usp=sharing]
 
 
 # Namings and testing
