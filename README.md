@@ -30,8 +30,16 @@ Download the repository and navigate into the folder
 $ git clone https://github.com/salihgunduz/epftoolbox_transfer_learning.git
 $ cd epftoolbox
 ```
+
+Install using pip
+```bash
+$ pip install .
+```
+Navigate to the examples folder and produce predictions by running  “transfer_learning_test.py” file.
+
+
 # Namings and testing
-Anyone can test and produce predictions by running  “transfer_learning_test.py” file.  In this file, we can set source, target, DNN_id and hyperparameter_file_name parameters. Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
+In “transfer_learning_test.py" file, we can set source, target, DNN_id and hyperparameter_file_name parameters. Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
 
 "target_source_dnnId_FT_experimentId_testDay.h5"  
 
