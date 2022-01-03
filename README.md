@@ -22,8 +22,14 @@ First, we select the best DNN models for the Belgium(DNN 4) and France(DNN 3) ta
 We applied transfer learning from Belgium to France and France to Belgium. 
 Then, we perform transfer learning from Germany to France and Belgium to show contribution changes, when input features are diverse (Belgium and France have similar exogenous features, Germany has diverse features). Overall transfer between France and Belgium is generating better results when compared to using Germany as a source market.
 
-We also selected the French market for detailed analysis on all DNN models suggested in [Lago et. al. (2021)](https://doi.org/10.1016/j.apenergy.2021.116983.) We applied transfer learning to all four models of the French market.Fine-tuning has shown a statistically significant performance increase for all models with the exception of DNN 4. 
+We also selected the French market for detailed analysis on all DNN models suggested in [Lago et. al. (2021)](https://doi.org/10.1016/j.apenergy.2021.116983.). We applied transfer learning to all four models of the French market.Fine-tuning has shown a statistically significant performance increase for all models with the exception of DNN 4. 
 
+## Getting started
+Download the repository and navigate into the folder
+```bash
+$ git clone https://github.com/salihgunduz/epftoolbox_transfer_learning.git
+$ cd epftoolbox
+```
 # Namings and testing
 Anyone can test and produce predictions by running  “transfer_learning_test.py” file.  In this file, we can set source, target, DNN_id and hyperparameter_file_name parameters. Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
 
