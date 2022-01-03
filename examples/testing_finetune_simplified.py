@@ -21,13 +21,13 @@ parser.add_argument("--target", type=str, default='FR',
 parser.add_argument("--source", type=str, default='BE', 
                     help='source market we pre-trained the model.')
 
-parser.add_argument("--DNN_id", type=str, default='1', 
+parser.add_argument("--DNN_id", type=str, default='3', 
                     help='DNN model"s index 1 to 4 (Models in the Lago et. al. (2021))')
 
 parser.add_argument("--experiment_id", type=str, default='1', 
                     help='Unique identifier to read the saved models')
 
-parser.add_argument("--hyperparameter_file_name", type=str, default='DNN_hyperparameters_nl2_datFR_YT2_SF_CW4_1', 
+parser.add_argument("--hyperparameter_file_name", type=str, default='DNN_hyperparameters_nl2_datFR_YT2_SF_SF_CW4_1', 
                     help='Unique identifier to read the saved models')
 
 

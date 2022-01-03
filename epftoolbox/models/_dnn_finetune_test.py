@@ -86,7 +86,7 @@ class DNNModel(object):
         The weight for regulization if ``regularization`` is ``'l2'`` or ``'l1'``.
     """
     
-    def __init__(self, neurons, n_features, outputShape=24, dropout=0, batch_normalization=False, learning_rate=None,
+    def __init__(self, neurons, n_features, outputShape=24, dropout=0, batch_normalization=False, lr=None,
                  verbose=False, epochs_early_stopping=40, scaler=None, loss='mae',
                  optimizer='adam', activation='relu', initializer='glorot_uniform',
                  regularization=None, lambda_reg=0,
@@ -120,17 +120,17 @@ class DNNModel(object):
 
 
 
-        if learning_rate is None:
+        if lr is None:
             opt = 'adam'
         else:
             if optimizer == 'adam':
-                opt = kr.optimizers.Adam(learning_rate=learning_rate, clipvalue=10000)
+                opt = kr.optimizers.Adam(lr=lr, clipvalue=10000)
             if optimizer == 'RMSprop':
-                opt = kr.optimizers.RMSprop(learning_rate=learning_rate, clipvalue=10000)
+                opt = kr.optimizers.RMSprop(lr=lr, clipvalue=10000)
             if optimizer == 'adagrad':
-                opt = kr.optimizers.Adagrad(learning_rate=learning_rate, clipvalue=10000)
+                opt = kr.optimizers.Adagrad(lr=lr, clipvalue=10000)
             if optimizer == 'adadelta':
-                opt = kr.optimizers.Adadelta(learning_rate=learning_rate, clipvalue=10000)
+                opt = kr.optimizers.Adadelta(lr=lr, clipvalue=10000)
 
         self.model.compile(loss=loss, optimizer=opt)
 
