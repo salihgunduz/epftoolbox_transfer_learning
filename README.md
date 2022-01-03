@@ -38,7 +38,7 @@ $ pip install .
 ```
 Navigate to the examples folder and produce predictions by running  “transfer_learning_test.py” file.
 
-Colab test: [https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE15wKSfcwgXVN_Ri?usp=sharing]
+Colab test notebook: [https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE15wKSfcwgXVN_Ri?usp=sharing]
 
 
 # Namings and testing
