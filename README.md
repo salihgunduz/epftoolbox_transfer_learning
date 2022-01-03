@@ -28,7 +28,7 @@ We also selected the French market for detailed analysis on all DNN models sugge
 Download the repository and navigate into the folder
 ```bash
 $ git clone https://github.com/salihgunduz/epftoolbox_transfer_learning.git
-$ cd epftoolbox
+$ cd epftoolbox_transfer_learning
 ```
 
 Install using pip
