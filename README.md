@@ -10,6 +10,9 @@ The library has been developed as part of the following article:
 The library is distributed under the AGPL-3.0 License and it is built on top of scikit-learn, tensorflow, keras, hyperopt, statsmodels, numpy, and pandas. 
 
 Website: [https://epftoolbox.readthedocs.io/en/latest/](https://epftoolbox.readthedocs.io/en/latest/) 
+Just for now, testing with saved models is available. 
+Pre-training and fine-tuning classes are orginising in a genereric way. We will share them in the short term.  
+
 
 # epftoolbox transfer learning
 #### This is the modified version of the epftoobox for transfer learning applications.
@@ -32,6 +35,4 @@ For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT
 
 "target_source_dnnId_FT_MAE.xlsx"  
 
-Just for now, testing with saved models is available. 
-Pre-training and fine-tuning classes are orginising in a genereric way. We will share them in the short term.  
 
