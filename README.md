@@ -48,6 +48,7 @@ In testing_finetune_simplified.py" file, we can set parameters below:
 * source
 * target
 * DNN_id
+* experiment_id
 * hyperparameter_file_name
 
 Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
