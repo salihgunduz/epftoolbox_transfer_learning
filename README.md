@@ -42,7 +42,7 @@ Navigate to the examples folder and produce predictions by running  testing_fine
 Colab test notebook: [https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE15wKSfcwgXVN_Ri?usp=sharing](https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE15wKSfcwgXVN_Ri?usp=sharing)
 
 
-# Namings and testing
+# Namings and forecasts
 In testing_finetune_simplified.py" file, we can set parameters below:
 
 * source
