@@ -52,7 +52,7 @@ In testing_finetune_simplified.py" file, we can set parameters below:
 
 Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
 
-#### "target_source_dnnId_FT_experimentId_testDay.h5"  
+#### "target_source_dnnId_FT_experimentId_testDayIndex.h5"  
 
 where FT means fine-tuned. The pre-treained models will be given as PT. hyperparameter_file_name can be copied from the folder "experimental_files". For example for Belgium DNN 4 is:
 #### "DNN_hyperparameters_nl2_datBE_YT2_SF_SF_DA_CW4_1"
