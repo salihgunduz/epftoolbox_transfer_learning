@@ -23,7 +23,7 @@ Then, we performed transfer learning from Germany to France and Belgium to show 
 We also selected the French market for detailed analysis on all DNN models suggested in [Lago et. al. (2021)](https://doi.org/10.1016/j.apenergy.2021.116983.). We applied transfer learning to all four models of the French market.Fine-tuning has shown a statistically significant performance increase for all models with the exception of DNN 4. 
 
 Just for now, testing with saved models is available. 
-Pre-training and fine-tuning classes are orginizing in a genereric way. We will share them in the short term.  
+Pre-training and fine-tuning classes are orginizing in a generic way. We will share them in the short term.  
 
 
 ## Getting started
