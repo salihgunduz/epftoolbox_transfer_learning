@@ -59,6 +59,6 @@ where FT means fine-tuned. The pre-treained models will be given as PT. hyperpar
 
 For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT/BE_FR_4_FT_1_1.h5" model is used. There are also random shuffle indexes files for each test day in the same folder  for producing same results. New Forecasts are in "forecasts" folder. They are are named like :
 
-"target_source_dnnId_FT_MAE.xlsx"  
+#### "target_source_dnnId_FT_MAE.xlsx"  
 
 
