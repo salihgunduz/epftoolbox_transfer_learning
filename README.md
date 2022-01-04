@@ -16,7 +16,7 @@ Website: [https://epftoolbox.readthedocs.io/en/latest/](https://epftoolbox.readt
 #### This is the modified version of the epftoobox for transfer learning applications.
 
 
-At first, we selected the best DNN models for the Belgium(DNN 4) and France(DNN 3) target markets. 
+At first, we selected the best DNN models from [Lago et. al. (2021)](https://doi.org/10.1016/j.apenergy.2021.116983.) for the Belgium(DNN 4) and France(DNN 3) target markets. 
 We applied transfer learning from Belgium to France and France to Belgium. 
 Then, we performed transfer learning from Germany to France and Belgium to show contribution changes, when input features are diverse (Belgium and France have similar exogenous features, Germany has diverse features). Overall transfer between France and Belgium is generating better results when compared to using Germany as a source market.
 
