@@ -45,12 +45,14 @@ Colab test notebook: [https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE
 # Namings and testing
 In testing_finetune_simplified.py" file, we can set parameters below:
 
-* Item 1
-* Item 2
-* Item 3
- source, target, DNN_id and hyperparameter_file_name parameters. Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
+* source
+* target
+* DNN_id
+* hyperparameter_file_name
 
-"target_source_dnnId_FT_experimentId_testDay.h5"  
+Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
+
+####"target_source_dnnId_FT_experimentId_testDay.h5"  
 
 where FT means fine-tuned. The pre-treained models will be given as PT. hyperparameter_file_name can be copied from the folder "experimental_files". For example for Belgium DNN 4 is "DNN_hyperparameters_nl2_datBE_YT2_SF_SF_DA_CW4_1"
 
