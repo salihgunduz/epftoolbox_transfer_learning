@@ -1,17 +1,3 @@
-# epftoolbox
-
-
-The epftoolbox is the first open-access library for driving research in electricity price forecasting. Its main goal is to make available a set of tools that ensure reproducibility and establish research standards in electricity price forecasting research.
-
-The library has been developed as part of the following article:
-
-- Jesus Lago, Grzegorz Marcjasz, Bart De Schutter, Rafał Weron. "Forecasting day-ahead electricity prices: A review of state-of-the-art algorithms, best practices and an open-access benchmark". *Applied Energy* 2021; 293:116983. [https://doi.org/10.1016/j.apenergy.2021.116983](https://doi.org/10.1016/j.apenergy.2021.116983).
-
-The library is distributed under the AGPL-3.0 License and it is built on top of scikit-learn, tensorflow, keras, hyperopt, statsmodels, numpy, and pandas. 
-
-Website: [https://epftoolbox.readthedocs.io/en/latest/](https://epftoolbox.readthedocs.io/en/latest/) 
-
-
 # epftoolbox transfer learning
 #### This is the modified version of the epftoobox for transfer learning applications.
 
@@ -43,7 +29,7 @@ Colab test notebook: [https://colab.research.google.com/drive/1MtaZsqLSjmXLRXfRE
 
 
 # Namings and forecasts
-In testing_finetune_simplified.py" file, we can set parameters below:
+In "testing_finetune_simplified.py" file, we can set parameters below:
 
 * source
 * target
@@ -62,4 +48,15 @@ For example to forecasting 01.01.2016 in Belgium market with DNN 4,  "BE_FR_4_FT
 
 #### "target_source_dnnId_FT_MAE.xlsx"  
 
+# epftoolbox
+
+The epftoolbox is the first open-access library for driving research in electricity price forecasting. Its main goal is to make available a set of tools that ensure reproducibility and establish research standards in electricity price forecasting research.
+
+The library has been developed as part of the following article:
+
+- Jesus Lago, Grzegorz Marcjasz, Bart De Schutter, Rafał Weron. "Forecasting day-ahead electricity prices: A review of state-of-the-art algorithms, best practices and an open-access benchmark". *Applied Energy* 2021; 293:116983. [https://doi.org/10.1016/j.apenergy.2021.116983](https://doi.org/10.1016/j.apenergy.2021.116983).
+
+The library is distributed under the AGPL-3.0 License and it is built on top of scikit-learn, tensorflow, keras, hyperopt, statsmodels, numpy, and pandas. 
+
+Website: [https://epftoolbox.readthedocs.io/en/latest/](https://epftoolbox.readthedocs.io/en/latest/) 
 
