@@ -15,13 +15,13 @@ Pre-training and fine-tuning classes are orginizing in a generic way. We will sh
 ## Getting started
 Download the repository and navigate into the folder
 ```bash
-$ git clone https://github.com/salihgunduz/epftoolbox_transfer_learning.git
-$ cd epftoolbox_transfer_learning
+! git clone https://github.com/salihgunduz/epftoolbox_transfer_learning.git
+! cd epftoolbox_transfer_learning
 ```
 
 Install using pip
 ```bash
-$ pip install .
+! pip install .
 ```
 Navigate to the examples folder and produce predictions by running  testing_finetune_simplified.py” file.
 
@@ -36,6 +36,13 @@ In "testing_finetune_simplified.py" file, we can set parameters below:
 * DNN_id
 * experiment_id
 * hyperparameter_file_name
+
+ 
+By running the code below new forecasts can be produced. Forecasts are saved to "examples/experimental_files"
+
+```bash
+! python testing_finetune_simplified.py --target="FR" --source="BE"  --DNN_id="3" --experiment_id="1" --hyperparameter_file_name="DNN_hyperparameters_nl2_datFR_YT2_SF_SF_CW4_1"
+```
 
 Saved models are in examples/saved_models folder. Saved models' names are formatted as below:
 
