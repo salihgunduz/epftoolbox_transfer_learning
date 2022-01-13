@@ -5,7 +5,10 @@ Simplified example for using the DNN model for forecasting prices with daily rec
 # Author: Jesus Lago
 
 # License: AGPL-3.0 License
-
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
 from epftoolbox.models import evaluate_finetune_in_test_dataset
 import os
 import argparse
