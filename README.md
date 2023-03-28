@@ -3,7 +3,7 @@
 
 The library has been developed as part of the following article:
 
-- Gunduz Salih, Ugurlu Umut, Oksuz Ilkay. "Transfer learning for electricity price forecasting. [https://doi.org/10.1016/j.segan.2023.100996](https://doi.org/10.1016/j.segan.2023.100996).
+- Gunduz Salih, Ugurlu Umut, Oksuz Ilkay. "Transfer learning for electricity price forecasting." [https://doi.org/10.1016/j.segan.2023.100996](https://doi.org/10.1016/j.segan.2023.100996).
 
 At first, we selected the best DNN models from [Lago et. al. (2021)](https://doi.org/10.1016/j.apenergy.2021.116983.) for the Belgium(DNN 4) and France(DNN 3) target markets. 
 We applied transfer learning from Belgium to France and France to Belgium. 
