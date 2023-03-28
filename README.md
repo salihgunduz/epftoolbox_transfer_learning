@@ -1,5 +1,5 @@
 # epftoolbox transfer learning
-#### This is the modified version of the epftoobox for transfer learning applications.
+#### This is the modified version of the [epftoobox](https://github.com/jeslago/epftoolbox) for transfer learning applications.
 
 The library has been developed as part of the following article:
 
